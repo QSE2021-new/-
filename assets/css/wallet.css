@@ -52,10 +52,6 @@ hr.mg5Hr {
   display: block;
 }
 
-.w-100{
-  width: 100%;
-}
-
 h1,
 h2,
 h3,
@@ -144,6 +140,13 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+/*-- 註解以上刪除 --*/
+
+.w-100{
+  width: 100%;
+}
+
 
 table th,
 table td{
@@ -1944,9 +1947,8 @@ table td{
     .my-wallet .rwd-table td .fBtn tr{
       border-bottom: none;
     }
-    .my-wallet .rwd-table td .fBtn td:first-child,
-    .my-wallet .rwd-table td .fBtn td:last-child{
-      padding:0;
+    .my-wallet .rwd-table td .fBtn td{
+      padding: 5px 10px;
     }
     .my-wallet .rwd-table td .fBtn td:before {
       margin-bottom: 0;
