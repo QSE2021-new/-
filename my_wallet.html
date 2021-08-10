@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的錢包</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- 主要樣式
+    <link rel="stylesheet" href="assets/css/wallet.css"> -->
+    <!-- 清快取用 -->
+    <script type="text/javascript">
+		document.write("<link rel='stylesheet' type='text/css' href='assets/css/wallet.css?v="+new Date().getTime()+"'>"); 
+    </script>
+</head>
+<body>
+    <section class="my-wallet container">
+        <div class="row">
+            <h4 class="pl-20">我的點數錢包</h4>
+            <div class="col-lg-3 col-xs-12 mt-20 mb-10">
+                <table class="table rwd-table myWallet_table">
+                    <tr align="right">
+                        <th>點數餘額</th>
+                        <td data-th="點數餘額">
+                            <h4>132,102</h4>
+                        </td>
+                    </tr>
+                    <tr align="right">
+                        <th>儲值點數</th>
+                        <td data-th="儲值點數">
+                            <a href="" class="btn btn-danger">儲值點數</a>
+                        </td>
+                    </tr>
+                    <tr align="right">
+                        <th>存入錢包</th>
+                        <td data-th="存入錢包">
+                            <button class="btn btn-info" data-toggle="modal" data-target="#doDeposit">存入錢包</button>
+                        </td>
+                    </tr>
+                    <tr align="right">
+                        <th>錢包紀錄</th>
+                        <td data-th="錢包紀錄">
+                            <a href="mywallet_Rec.html">錢包使用紀錄</a>
+                        </td>
+                    </tr>
+                </table>
+                <!-- 手機版用-->
+                <ul class="myWallet_m">
+                    <li class="col-xs-12">
+                        <h6>點數餘額</h6>
+                        <p class="text-right">123,201</p>
+                    </li>
+                    <li class="col-xs-6 text-center">
+                        <h6 class="text-left">儲值點數</h6>
+                        <a href="" class="btn btn-danger">儲值點數</a>
+                    </li>
+                    <li class="col-xs-6 text-center">
+                        <h6 class="text-left">存入錢包</h6>
+                        <button class="btn btn-info" data-toggle="modal" data-target="#doDeposit">存入錢包</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-9 col-xs-12 mt-20 mb-10">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading panel-heading-nav">
+                        <ul class="nav nav-tabs">
+                            <li role="presentation" class="active">
+                                <a href="#nowClass" aria-controls="one" role="tab" data-toggle="tab">所有課程</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#payClass" aria-controls="two" role="tab" data-toggle="tab">您已購買</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="panel-body">
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane fade in active" id="nowClass">
+                                <table class="table rwd-table">
+                                    <thead>
+                                        <th>活動列表</th>
+                                        <th>活動日期</th>
+                                        <th>活動點數</th>
+                                        <th>我要參加</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-th="活動列表">
+                                                <mark>線上課程</mark><span class="pl-10">什麼都可能 - 量子力學的生活應用</span>
+                                            </td>
+                                            <td data-th="活動日期">
+                                                <p class="w-100">2021.03.03 <br> 下午14:00:00</p>
+                                            </td>
+                                            <td data-th="活動點數" align="right">
+                                                <p class="w-100 text-right">23,333</p>
+                                            </td>
+                                            <td data-th="參加" align="center">
+                                                <button class="w-100 btn btn-info">我要參加！</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-th="活動列表">
+                                                <mark>線上課程</mark><span class="pl-10">什麼都可能 - 量子力學的生活應用</span>
+                                            </td>
+                                            <td data-th="活動日期">
+                                                <p class="w-100">2021.03.03<br> 下午14:00:00</p>
+                                            </td>
+                                            <td data-th="活動點數" align="right">
+                                                <p class="w-100 text-right">23,333</p>
+                                            </td>
+                                            <td data-th="參加" align="center">
+                                                <button class="w-100 btn btn-info">我要參加！</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-th="活動列表">
+                                                <mark>線上課程</mark><span class="pl-10">什麼都可能 - 量子力學的生活應用</span>
+                                            </td>
+                                            <td data-th="活動日期">
+                                                <p class="w-100">2021.03.03<br> 下午14:00:00</p>
+                                            </td>
+                                            <td data-th="活動點數" align="right">
+                                                <p class="w-100 text-right">23,333</p>
+                                            </td>
+                                            <td data-th="參加" align="center">
+                                                <button class="w-100 btn btn-info">我要參加！</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!-- 超過10筆顯示頁碼 -->
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="payClass">
+                                <table class="table rwd-table">
+                                    <thead>
+                                        <th>活動列表</th>
+                                        <th>活動日期</th>
+                                        <th>支付的點數</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-th="活動列表">
+                                                <mark>線上課程</mark><span class="pl-10">什麼都可能 - 量子力學的生活應用</span>
+                                            </td>
+                                            <td data-th="活動日期">
+                                                <p class="w-100">2021.03.03 <br> 下午14:00:00</p>
+                                            </td>
+                                            <td data-th="活動點數" align="right">
+                                                <p class="w-100 text-right">23,333</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!-- 超過10筆顯示頁碼 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+</body>
+
+    <!-- Modal -->
+    <div id="doDeposit" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">存入錢包</h4>
+        </div>
+        <div class="modal-body">
+            <p><mark class="mr-10">溫馨提醒</mark>點數一但存入點數錢包後，將無法再取出作為一般點數使用。</p>
+            <p>
+                <div class="form-group">
+                    <label for="eventPrice">本次儲入點數</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="eventPrice" placeholder="本次儲入點數">
+                        <div class="input-group-addon">點</div>
+                    </div>
+                </div>
+            </p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <button type="button" class="btn btn-success">存入我的錢包</button>
+        </div>
+        </div>
+
+    </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</html>

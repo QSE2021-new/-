@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>後台 - 收款人活動列表</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- 主要樣式
+    <link rel="stylesheet" href="assets/css/wallet.css"> -->
+    <!-- 清快取用 -->
+    <script type="text/javascript">
+		document.write("<link rel='stylesheet' type='text/css' href='assets/css/wallet.css?v="+new Date().getTime()+"'>"); 
+    </script>
+</head>
+<body>
+    <section class="my-wallet container">
+        <div class="row">
+            <aside class="col-lg-12">
+                <a class="btn btn-info" href="eventAdm.html">回列表活動</a>
+            </aside>
+            <div class="col-lg-12 col-xs-12 mt-20 mb-10">
+                <table class="table rwd-table">
+                    <thead>
+                        <th>付款人帳號</th>
+                        <th>日期</th>
+                        <th>付款點數</th>
+                        <th>備註</th>
+                    </thead>
+                    <tr>
+                        <td data-th="付款人帳號">
+                            <h6>USER NAME</h6>
+                        </td>
+                        <td data-th="日期">
+                            <h6>2021.02.20 <br> 上午11:30:23</h6>
+                        </td>
+                        <td data-th="付款點數" align="right">
+                           <span class="w-100 text-right">23,333</span>
+                        </td>
+                        <td data-th="備註">
+                            <textarea class="w-100" name="" id="" cols="20" rows="5"></textarea>
+                        </td>
+                    </tr>
+                </table>
+                <!-- 超過10筆顯示頁碼 -->
+            </div>
+        </div>
+    </section>
+</body>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</html>

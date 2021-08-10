@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>點數錢包紀錄</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- 主要樣式
+    <link rel="stylesheet" href="assets/css/wallet.css"> -->
+    <!-- 清快取用 -->
+    <script type="text/javascript">
+		document.write("<link rel='stylesheet' type='text/css' href='assets/css/wallet.css?v="+new Date().getTime()+"'>"); 
+    </script>
+</head>
+<body>
+    <section class="my-wallet container">
+        <div class="row">
+            <h4 class="pl-20">點數錢包紀錄</h4>
+            <div class="panel panel-default">
+                <div class="panel-heading panel-heading-nav">
+                    <ul class="nav nav-tabs">
+                        <li role="presentation" class="active">
+                            <a href="#depositRec" aria-controls="one" role="tab" data-toggle="tab">存入記錄</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#shoppingRec" aria-controls="two" role="tab" data-toggle="tab">點數錢包使用紀錄</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="panel-body">
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade in active" id="depositRec">
+                            <h5>存入記錄</h5>
+                            <table class="table rwd-table">
+                                <thead>
+                                    <th>存入日期</th>
+                                    <th>存入多少點數</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-th="存入日期">
+                                            <span class="w-100 text-right">2021.02.28</span>
+                                        </td>
+                                        <td align="right" data-th="存入多少點數">
+                                            <span class="w-100 text-right">212,320</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- 超過10筆顯示頁碼 -->
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="shoppingRec">
+                            <h5>點數錢包使用紀錄</h5>
+                            <table class="table rwd-table">
+                                <thead>
+                                    <th>活動名稱</th>
+                                    <th>日期時間</th>
+                                    <th>花費點數</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-th="活動名稱">
+                                            <span>什麼都可能 - 量子力學的生活應用</span>
+                                        </td>
+                                        <td data-th="日期時間">
+                                            <span class="w-100 text-right">2021.02.28</span>
+                                        </td>
+                                        <td align="right" data-th="花費點數">
+                                            <span class="w-100 text-right">212,320</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- 超過10筆顯示頁碼 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</html>
