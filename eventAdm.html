@@ -15,7 +15,7 @@
 <body>
     <section class="my-wallet container">
         <div class="row">
-            <h4 class="pl-20">後台 - 收款人活動列表</h4>
+            <h4 class="pl-20">後台 - 收款人(活動主辦人)活動列表</h4>
             <aside class="col-lg-12 text-right">
                 <button class="btn btn-warning" data-toggle="modal" data-target="#eventNew">新增活動</button>
             </aside>
@@ -23,49 +23,48 @@
                 <table class="table rwd-table">
                     <thead>
                         <th>項次</th>
-                        <th>活動名稱</th>
+                        <th>功能鍵</th>
                     </thead>
                     <tbody>
                         <tr>
-                            <th>活動名稱</th>
-                            <td data-th="活動名稱">
-                                <h5><a href="eventDetail.html" class="text-primary"><u>什麼都可能 - 量子力學的生活應用 <span class="badge badge-dark">88/100 人</span></u> <mark>即將開始</mark></a></h5>
+                            <td data-th="項次">
+                                <table class="table fBtn">
+                                    <thead>
+                                        <th>活動名稱</th>
+                                        <th>日期</th>
+                                        <th>點數換現金</th>
+                                    </thead>
+                                    <tr>
+                                        <td data-th="活動名稱">
+                                            <h5><a href="eventDetail.html" class="text-primary"><u>什麼都可能 - 量子力學的生活應用 <span class="badge badge-dark">88/100 人</span></u> <span class="badge badge-dark">已結束</span></a></h5>
+                                        </td>
+                                        <td data-th="日期">
+                                            <h5>2021.02.20</h5>
+                                        </td>
+                                        <td data-th="點數換現金" align="right">
+                                            <button class="btn btn-info" data-toggle="modal" data-target="#doPts2Cash">點數換現金</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-th="課程內容" colspan="3">
+                                            <p>hello</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td data-th="功能鍵">
+                                <table class="table fBtn w-100">
+                                    <tr>
+                                        <td align="center" data-th="修改/刪除">
+                                            <button class="btn btn-default" data-toggle="modal" data-target="#eventNew">修改</button>
+                                            <button class="btn btn-danger">刪除</button>
+                                        </td>
+                                    </tr>
+                                </table>
                             </td>
                         </tr>
-                        <tr align="right">
-                            <th>日期</th>
-                            <td data-th="日期">
-                                <h5>2021.02.20</h5>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>點數換現金</th>
-                            <td data-th="點數換現金" align="right">
-                                <button class="btn btn-info" data-toggle="modal" data-target="#doPts2Cash">點數換現金</button>
-                            </td>
-                        </tr>
+
                     </tbody>
-                    <tbody>
-                        <tr>
-                            <th>活動名稱</th>
-                            <td data-th="活動名稱">
-                                <h5><a href="eventDetail.html" class="text-primary"><u>什麼都可能 - 量子力學的生活應用 <span class="badge badge-dark">88/100 人</span></u> <mark>已結束</mark></a></h5>
-                            </td>
-                        </tr>
-                        <tr align="right">
-                            <th>日期</th>
-                            <td data-th="日期">
-                                <h5>2021.02.20</h5>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>點數換現金</th>
-                            <td data-th="點數換現金" align="right">
-                                <button class="btn btn-info" data-toggle="modal" data-target="#doPts2Cash">點數換現金</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                    
                 </table>
                 <!-- 超過10筆顯示頁碼 -->
             </div>
@@ -107,67 +106,77 @@
             <div class="modal-body">
                 <form>
                     <div class="form-group">
-                      <label for="eventTitle">活動名稱</label>
-                      <input type="text" class="form-control" id="eventTitle" placeholder="活動名稱">
+                        <label for="eventTitle">活動名稱</label>
+                        <input type="text" class="form-control" id="eventTitle" placeholder="活動名稱">
                     </div>
-                    <div class="form-group">
-                        <label for="eventDate">活動日期</label>
-                        <input type="date" class="form-control" id="eventDate">
-                    </div>
-                    <div class="form-group">
-                        <label for="eventDate">活動時間</label>
-                        <input type="time" class="form-control" id="eventDate">
-                    </div>
-                    <div class="form-group">
-                        <label for="eventPrice">本次活動點數</label>
-                        <div class="input-group">
-                          <input type="text" class="form-control" id="eventPrice" placeholder="本次活動點數">
-                          <div class="input-group-addon">點</div>
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="eventDate">活動日期</label>
+                            <input type="date" class="form-control" id="eventDate">
                         </div>
-                      </div>
-                      <div class="form-group">
-                        <table class="table">
-                            <tr>
-                                <td>
-                                    <label for="">checkbox</label>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" value="">
-                                            checkbox1
-                                        </label>
-                                    </div>
-                                    <div class="checkbox disabled">
-                                        <label>
-                                            <input type="checkbox" value="" disabled>
-                                            checkbox2
-                                        </label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <label for="">radio</label>
-                                    <div class="radio">
-                                      <label>
-                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                                        Option 1
-                                      </label>
-                                    </div>
-                                    <div class="radio">
-                                      <label>
-                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                                        Option 2
-                                      </label>
-                                    </div>
-                                    <div class="radio disabled">
-                                      <label>
-                                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-                                        Option 3
-                                      </label>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                      </div>
-                  </form>
+                        <div class="form-group col-sm-6">
+                            <label for="eventPrice">本次活動點數</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="eventPrice" placeholder="點數">
+                                <div class="input-group-addon">點</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-6 col-xs-6">
+                            <label for="eventDate">活動開始時間</label>
+                            <input type="time" class="form-control" id="eventDate">
+                        </div>
+                        <div class="form-group col-sm-6 col-xs-6">
+                            <label for="eventDate">活動結束時間</label>
+                            <input type="time" class="form-control" id="eventDate">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>課程內容</label>
+                        <textarea class="w-100" name="" id="" cols="20" rows="5"></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-xs-6">
+                            <label for="">checkbox</label>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="">
+                                    checkbox1
+                                </label>
+                            </div>
+                            <div class="checkbox disabled">
+                                <label>
+                                    <input type="checkbox" value="" disabled>
+                                    checkbox2
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group col-xs-6">
+                            <label for="">radio</label>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"
+                                        checked>
+                                    Option 1
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                    Option 2
+                                </label>
+                            </div>
+                            <div class="radio disabled">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3"
+                                        disabled>
+                                    Option 3
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>

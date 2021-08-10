@@ -1822,10 +1822,21 @@ table td{
   margin: 290px 0;
 }
 
+.my-wallet a{
+  border: none !important;
+}
+
 @media (min-width:769px){
   .myWallet_m{
     display: none;
   }
+  
+  .fBtn tr,
+  .fBtn th,
+  .fBtn td{
+    border-top:none !important;
+    padding: 0px;
+  }  
 }
 
 
@@ -1923,5 +1934,21 @@ table td{
     .myWallet_m li .btn,
     .rwd-table td button{
       width: 100%;
+    }
+
+    table.fBtn td button.btn{
+      width: 48%;
+      margin: 0 1%;
+      float: left;
+    }
+    .my-wallet .rwd-table td .fBtn tr{
+      border-bottom: none;
+    }
+    .my-wallet .rwd-table td .fBtn td:first-child,
+    .my-wallet .rwd-table td .fBtn td:last-child{
+      padding:0;
+    }
+    .my-wallet .rwd-table td .fBtn td:before {
+      margin-bottom: 0;
     }
   }

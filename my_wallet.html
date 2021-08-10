@@ -85,7 +85,7 @@
                                     <tbody>
                                         <tr>
                                             <td data-th="活動列表">
-                                                <mark>線上課程</mark><span class="pl-10">什麼都可能 - 量子力學的生活應用</span>
+                                                <mark>線上課程</mark><a class="pl-10" data-toggle="modal" data-target="#classInformation" title="什麼都可能 - 量子力學的生活應用"><u>什麼都可能 - 量子力學的生活應用</u></a>
                                             </td>
                                             <td data-th="活動日期">
                                                 <p class="w-100">2021.03.03 <br> 下午14:00:00</p>
@@ -99,7 +99,7 @@
                                         </tr>
                                         <tr>
                                             <td data-th="活動列表">
-                                                <mark>線上課程</mark><span class="pl-10">什麼都可能 - 量子力學的生活應用</span>
+                                                <mark>線上課程</mark><a class="pl-10" data-toggle="modal" data-target="#classInformation" title="什麼都可能 - 量子力學的生活應用"><u>什麼都可能 - 量子力學的生活應用</u></a>
                                             </td>
                                             <td data-th="活動日期">
                                                 <p class="w-100">2021.03.03<br> 下午14:00:00</p>
@@ -113,7 +113,7 @@
                                         </tr>
                                         <tr>
                                             <td data-th="活動列表">
-                                                <mark>線上課程</mark><span class="pl-10">什麼都可能 - 量子力學的生活應用</span>
+                                                <mark>線上課程</mark><a class="pl-10" data-toggle="modal" data-target="#classInformation" title="什麼都可能 - 量子力學的生活應用"><u>什麼都可能 - 量子力學的生活應用</u></a>
                                             </td>
                                             <td data-th="活動日期">
                                                 <p class="w-100">2021.03.03<br> 下午14:00:00</p>
@@ -139,7 +139,7 @@
                                     <tbody>
                                         <tr>
                                             <td data-th="活動列表">
-                                                <mark>線上課程</mark><span class="pl-10">什麼都可能 - 量子力學的生活應用</span>
+                                                <mark>線上課程</mark><a class="pl-10" data-toggle="modal" data-target="#classInformation" title="什麼都可能 - 量子力學的生活應用"><u>什麼都可能 - 量子力學的生活應用</u></a>
                                             </td>
                                             <td data-th="活動日期">
                                                 <p class="w-100">2021.03.03 <br> 下午14:00:00</p>
@@ -161,35 +161,65 @@
     </section>
 </body>
 
-    <!-- Modal -->
+    <!-- 存入錢包 -->
     <div id="doDeposit" class="modal fade" role="dialog">
-    <div class="modal-dialog">
+        <div class="modal-dialog">
 
-        <!-- Modal content-->
-        <div class="modal-content">
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">存入錢包</h4>
-        </div>
-        <div class="modal-body">
-            <p><mark class="mr-10">溫馨提醒</mark>點數一但存入點數錢包後，將無法再取出作為一般點數使用。</p>
-            <p>
-                <div class="form-group">
-                    <label for="eventPrice">本次儲入點數</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="eventPrice" placeholder="本次儲入點數">
-                        <div class="input-group-addon">點</div>
-                    </div>
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">存入錢包</h4>
                 </div>
-            </p>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-            <button type="button" class="btn btn-success">存入我的錢包</button>
-        </div>
-        </div>
+                <div class="modal-body">
+                    <p><mark class="mr-10">溫馨提醒</mark>點數一但存入點數錢包後，將無法再取出作為一般點數使用。</p>
+                    <p>
+                        <div class="form-group">
+                            <label for="eventPrice">本次儲入點數</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="eventPrice" placeholder="本次儲入點數">
+                                <div class="input-group-addon">點</div>
+                            </div>
+                        </div>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-success">存入我的錢包</button>
+                </div>
+            </div>
 
+        </div>
     </div>
+
+    <!-- 查看課程 -->
+    <div id="classInformation" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">課程大綱</h4>
+                </div>
+                <div class="modal-body">
+                    <p>量子風水/運勢如何相輔相成？</p>
+                    <p>日月星辰、地水火風與人身小宇宙的全方位關聯性從來就存在，只是我們習於在果象上打轉追究，鑽不出迷霧森林而已！</p>
+                    <p>🔍 從家道中落或旺安，看地理風水/業力錯綜關係</p>
+                    <p>🔍 從家道中落或旺安，看地理風水/業力錯綜關係</p>
+                    <p>🔎 業力與業障有何不同</p>
+                    <p>🔍 福地福人居的邏輯辨證</p>
+                    <p>🔎 東調西動外的量子應用方便門</p>
+                    <p>🎤 個案分享</p>
+                    <p>主講：林子霖 老師</p>
+                    <p>（中醫學碩士/博士；鈦生量子科技創辦人）</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
+                </div>
+            </div>
+
+        </div>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
